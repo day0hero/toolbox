@@ -4,4 +4,4 @@ FROM image-registry.openshift-image-registry.svc:5000/openshift/tools:latest
 RUN curl -o /usr/local/bin/rekor https://github.com/sigstore/rekor/releases/download/v0.10.0/rekor-cli-linux-amd64 \
      && chmod +x /usr/local/bin/rekor
 
-ENTRYPOINT ["/usr/local/bin/rekor"]
+CMD ["/usr/local/bin/rekor"]
